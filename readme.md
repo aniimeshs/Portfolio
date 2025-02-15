@@ -18,7 +18,7 @@ This is the personal portfolio website of Animesh Singh, a Full Stack Developer 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/your-repository-name.git
+    git clone https://github.com/aniimeshs/Portfolio.git
     ```
 2. Open `` in your browser to view the portfolio.
 
