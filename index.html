@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animesh Singh | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+    <header>
+        <h1>Animesh Singh</h1>
+        <p>Full Stack Developer & Machine Learning Engineer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Animesh Singh, a passionate Full Stack Developer and Machine Learning Engineer with experience in developing efficient, scalable, and user-friendly applications. I specialize in JavaScript, Python, C++, and cutting-edge web and AI technologies.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Task Tracker CLI (JS)</strong> - A command-line task tracker.<br>
+                <span class="project-links">
+                    <a href="https://github.com/aniimeshs/Task-Tracker" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub Repo
+                    </a>
+                </span>
+            </li>
+            <li><strong>Weather App (JS)</strong> - A real-time weather forecasting application.<br>
+                <span class="project-links">
+                    <a href="https://aniimeshs.github.io/Weather-Application.github.io/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Live Demo"> Live Demo
+                    </a>
+                </span>
+            </li>
+            <li><strong>Expense Tracker (C++)</strong> - A financial management tool.<br>
+                <span class="project-links">
+                    <a href="https://github.com/aniimeshs/Expense-Tracker" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub Repo
+                    </a>
+                </span>
+            </li>
+            <li><strong>Credit Card Fraud Detection (ML)</strong> - A machine learning model for fraud detection.<br>
+                <span class="project-links">
+                    <a href="https://github.com/aniimeshs/Credit-Card-Fraud" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub Repo
+                    </a>
+                </span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, C++, JavaScript</li>
+            <li>Web Development: React, Node.js, Express, MongoDB</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Machine Learning & Artificial Intelligence</li>
+            <li>API Development & Integration</li>
+            <li>Problem Solving & Competitive Programming</li>
+        </ul>
+    </section>
+    
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Solved 300+ problems on LeetCode</li>
+            <li>4 ⭐ HackerRank</li>
+            <li>Attended <strong>Harvard CS50x 2024 </strong></li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+            <a href="mailto:aniimeshpsingh@gmail.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="40" class="contact-icon">
+            </a>
+            <a href="https://github.com/Aniimeshs" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" class="contact-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/aniimeshs/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="LinkedIn" width="40" class="contact-icon">
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Animesh Singh. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.toggle-theme');
+
+            // Toggle theme class
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                localStorage.setItem('theme', 'dark'); // Save preference
+                button.innerHTML = "☀️"; // Sun for Light Mode
+            } else {
+                body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light'); // Save preference
+                button.innerHTML = "🌙"; // Moon for Dark Mode
+            }
+        }
+
+        // Load theme preference on page load
+        window.onload = function() {
+            const savedTheme = localStorage.getItem('theme');
+            const button = document.querySelector('.toggle-theme');
+
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                button.innerHTML = "🌙"; // Moon for Dark Mode
+            } else {
+                button.innerHTML = "☀️"; // Sun for Light Mode
+            }
+        };
+    </script>
+</body>
+</html>
